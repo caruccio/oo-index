@@ -328,8 +328,12 @@ def _read_github_file(username, reponame, filename):
     '''Fork repo and read content of `filename`.
     '''
     print 'Loading file content from %s/%s/%s' % (g.user, reponame, filename)
-    gh = PyGitHub.Github(session['token'])
-    user = gh.get_user()
+    if os.environ.get('AUTH_USER_CREATE_PR', False):
+        gh = PyGitHub.Github(session['token'])
+        user = gh.get_user()
+    else:
+        gh = PyGitHub.Github(client_id=app.config['GITHUB_CLIENT_ID'], client_secret=app.config['GITHUB_CLIENT_SECRET'])
+        user = gh.get_user(g.user)
 
     # Get user's oo-index repo, create if not exists
     try:
@@ -433,7 +437,7 @@ def send_pull_request(form_data):
         qs['owner_name']       = qs['owner']
         qs['owner_avatar_url'] = ''
 
-    # read content of original quickstar.json
+    # read content of original quickstart.json
     # fork repo if needed
     u = app.config['OO_INDEX_GITHUB_USERNAME']
     r = app.config['OO_INDEX_GITHUB_REPONAME']
