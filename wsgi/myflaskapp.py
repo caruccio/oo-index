@@ -437,7 +437,7 @@ def send_pull_request(form_data):
         qs['owner_name']       = qs['owner']
         qs['owner_avatar_url'] = ''
 
-    # read content of original quickstar.json
+    # read content of original quickstart.json
     # fork repo if needed
     u = app.config['OO_INDEX_GITHUB_USERNAME']
     r = app.config['OO_INDEX_GITHUB_REPONAME']
