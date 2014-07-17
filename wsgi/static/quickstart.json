@@ -1,5 +1,28 @@
 [
-{
+   {
+      "updated_at": "2014-07-10T18:57:33Z", 
+      "owner": "https://github.com/getupcloud", 
+      "id": 21694520, 
+      "description": "Elasticsearch exposed as Addon to your app.", 
+      "size": 232, 
+      "forks": 1, 
+      "watchers": 0, 
+      "name": "openshift-cartridge-elasticsearch-addon", 
+      "language": "Shell", 
+      "created_at": "2014-07-10T13:08:27Z", 
+      "stargazers": 0, 
+      "owner_type": "User", 
+      "default_app_name": "elasticsearch", 
+      "cartridges": [
+         ""
+      ], 
+      "git_repo_url": "https://github.com/getupcloud/openshift-cartridge-elasticsearch-addon.git", 
+      "type": "cartridge", 
+      "submitted_at": "2014-07-17T16:58:15.637624", 
+      "owner_name": "Getup Cloud", 
+      "owner_avatar_url": "https://avatars.githubusercontent.com/u/3430018?"
+   }, 
+   {
       "updated_at": "2014-06-24T12:54:34Z", 
       "owner": "https://github.com/rkmallik", 
       "id": 18625938, 
